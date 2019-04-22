@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main_map.textCheapestRoute
 import kotlinx.android.synthetic.main.activity_main_map.textQuickestRoute
 import kotlinx.android.synthetic.main.include_card_info.cardDetails
 import kotlinx.android.synthetic.main.include_card_info.textAddress
+import kotlinx.android.synthetic.main.include_card_info.textConnectorName
 
 class MainMapActivity : BaseActivity<Presenter>(), View {
 
@@ -54,7 +55,7 @@ class MainMapActivity : BaseActivity<Presenter>(), View {
 
     override fun showInformation(information: Information) {
         cardDetails.visibility = VISIBLE
-        `@+id/textConnectorName`.text = information.name
+        textConnectorName.text = information.name
         textAddress.text = "${information.country}, ${information.city}, ${information.street}"
     }
 
